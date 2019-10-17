@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 6.02: Device Orientation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+    	text-align: center;
+    }
+
+    nav ul {
+    	list-style: none;
+    }
+
+    nav li {
+    	display: inline-block;
+    	margin-right: 5px;
+    	padding-right: 5px;
+    	border-right: 1px solid black;
+    }
+
+    nav li a {
+    	color: black;
+    	text-decoration: none;
+    }
+
+    nav li a:hover {
+    	text-decoration: underline;
+    }
+
+    nav li:last-child {
+    	border-right: 0;
+    	padding-right: 0;
+    	margin-right: 0;
+    }
+
+    article, footer, nav {
+    	padding: 10px;
+    }
+ 
+    article h1, article p {
+    	margin-bottom: 10px;
+    }
+
+    footer {
+    	background: black;
+    	text-align: center;
+    	color: white;
+    }
+
+    @media (orientation: landscape) {
+    	header {
+    		display: flex;
+    		align-items: center;
+    	}
+
+    	nav {
+    		margin-left: 20px;
+    	}
+
+    	article {
+    		columns: 100px 2;
+    	}
+    }
+  </style>
+</head>
+ 
+<body>
+  <header>
+  	<img src="https://dummyimage.com/200x100/000/fff&text=Logo" alt="" />
+
+  	<nav>
+  		<ul>
+  			<li><a href="">Home</a></li>
+  			<li><a href="">Nav #1</a></li>
+  			<li><a href="">Nav #2</a></li>
+  			<li><a href="">Nav #3</a></li>
+  		</ul>
+  	</nav>
+  </header>
+  <article>
+  	<h1>Video Review</h1>
+  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, sapien at tincidunt finibus, mauris purus tincidunt orci, non cursus lorem lectus ac urna. Ut non porttitor nisl. Morbi id nisi eros.</p>
+  	<p>Donec et purus sit amet odio interdum accumsan eleifend ut sapien. Praesent bibendum turpis non nisl elementum, sed ornare purus semper. In vel sagittis felis. </p>
+  	<p>Suspendisse vitae scelerisque est. Aenean tempus congue lacus vehicula congue. Vivamus congue ligula nec purus malesuada volutpat.</p>
+  	<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur sit amet mattis urna. Morbi id luctus purus, sodales facilisis odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </article>
+  <footer>
+  	<p>Website by Author Name</p>
+  </footer>
+</body>
+</html>

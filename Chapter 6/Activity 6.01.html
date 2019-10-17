@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video store home page</title>
+
+  <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+ 
+    body {
+        font-family: sans-serif;
+        margin: 0 auto;
+    }
+ 
+    header {
+    	text-align: center;
+    }
+ 
+    .product-cards {
+      margin-bottom: 30px;
+    }
+
+    nav {
+    	margin-top: 20px;
+    	background: black;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: center;    
+    }
+ 
+    nav a {
+      color: white;
+      font-weight: bold;
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+    	color: red;
+    }
+
+    .breadcrumb {
+      display: flex;
+      list-style: none;
+      background: lightgrey;
+    }
+ 
+    .breadcrumb li {
+      padding: 10px;
+    }
+ 
+    .breadcrumb li:after {
+      content: "/";
+      margin-left: 20px;
+    }
+ 
+    .breadcrumb li:last-child:after {
+      content: "";
+    }
+ 
+    .breadcrumb a {
+      color: black;
+      text-decoration: none;
+    }
+ 
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    .intro {
+      margin: 30px 0;
+      padding: 0 10px;
+    }
+ 
+    .intro h1 {
+      margin-bottom: 15px;
+    }
+ 
+    .intro p {
+      line-height: 1.5;
+    }
+ 
+    .product-card {
+      border: 1px solid black;
+      padding: 15px;
+      margin: 10px;
+    }
+ 
+    .product-card a {
+      color: black;
+      text-decoration: none;
+    }
+ 
+    .product-card img {
+      width: 100%;
+    }
+ 
+    .product-card h2 {
+      margin: 30px 0 15px;
+    }
+ 
+    .product-card p {
+      line-height: 1.5;
+    }
+ 
+    .original-price {
+      color: grey;
+      text-transform: uppercase;
+    }
+ 
+    .current-price span {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+ 
+    .saving {
+      color: green;
+    }
+
+    @media (min-width: 768px) {
+    	header {
+    		align-items: center;
+        	display: flex;
+    	}
+    	nav {
+    		background: transparent;
+    		margin-top: 0;
+    		margin-left: 30px;
+    	}
+    	nav a {
+    		color: black;
+    	}
+    	nav a:hover {
+    		text-decoration: underline;
+    		color: black;
+    	}
+    	.intro {
+    		width: 50%;
+    	}
+    	.product-cards {
+      		display: grid;
+      		grid-template-columns: auto auto auto auto;
+      	}
+      	.product-card {
+      		display: inline-block;
+      	}
+    }
+
+    @media only print {
+    	nav {
+    		display: none;
+    	}
+    }
+  </style>
+</head>
+ 
+<body>
+  <header>
+    <img src="https://dummyimage.com/200x100/000/fff&text=Logo" alt="" />
+    <nav>
+      <ul>
+        <li><a href="">Videos to rent</a></li>
+        <li><a href="">Videos to buy</a></li>
+        <li><a href="">Used DVDs</a></li>
+        <li><a href="">Offers</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <ol class="breadcrumb">
+      <li><a href="">Home</a></li>
+      <li><a href="">Used DVDs</a></li>
+      <li>Less than £10</li>
+    </ol>
+  </section>
+  <section class="intro">
+    <h1>Videos less than £10</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum non purus quis vestibulum. Pellentesque ultricies quam lacus, ut tristique sapien tristique et.</p>
+  </section>
+  <section class="product-cards">
+    <div class="product-card">
+      <img src="https://dummyimage.com/300x300/7EC0EE/000&text=Product+Image+1" alt="" />
+      <h2><a href="">Video title 1</a></h2>
+      <p class="original-price">RRP: £18.99</p>
+      <p class="current-price">Price you pay <span>£9.99</span></p>
+      <p class="saving">Your saving £9</p>
+    </div>
+ 
+    <div class="product-card">
+      <img src="https://dummyimage.com/300x300/7EC0EE/000&text=Product+Image+2" alt="" />
+      <h2><a href="">Video title 2</a></h2>
+      <p class="original-price">RRP: £18.99</p>
+      <p class="current-price">Price you pay <span>£9.99</span></p>
+      <p class="saving">Your saving £9</p>
+    </div>
+ 
+    <div class="product-card">
+      <img src="https://dummyimage.com/300x300/7EC0EE/000&text=Product+Image+3" alt="" />
+      <h2><a href="">Video title 3</a></h2>
+      <p class="original-price">RRP: £18.99</p>
+      <p class="current-price">Price you pay <span>£9.99</span></p>
+      <p class="saving">Your saving £9</p>
+    </div>
+ 
+    <div class="product-card">
+      <img src="https://dummyimage.com/300x300/7EC0EE/000&text=Product+Image+4" alt="" />
+      <h2><a href="">Video title 4</a></h2>
+      <p class="original-price">RRP: £18.99</p>
+      <p class="current-price">Price you pay <span>£9.99</span></p>
+      <p class="saving">Your saving £9</p>
+    </div>
+  </section>
+</body>
+</html>
