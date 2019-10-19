@@ -1,0 +1,26 @@
+<html lang="en">
+     <head>
+          <title>Example of a web page with a Shadow DOM</title>
+          <style>
+              p {
+                 color: white;
+                 font-weight: bold;
+                 background-color: red;
+              }
+          </style>
+     </head>
+     <body>
+         <p>Paragraph in the DOM</p>
+         <div id="host"></div>
+         <p>Another Paragraph in the DOM</p>
+          <script>
+          const hostElement = document.getElementById("host");
+           hostElement.attachShadow({ mode: "open" });
+           const shadowRoot = hostElement.shadowRoot;
+
+           const paragraph = document.createElement("p");
+           paragraph.textContent = "Paragraph in the Shadow DOM";
+          shadowRoot.appendChild(paragraph);
+         </script>
+     </body>
+</html>
