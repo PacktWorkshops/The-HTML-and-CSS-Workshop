@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise 12.05: Shadow DOM</title>
+        <style>
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                background:lightskyblue;
+                padding: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="blog-posts">
+            <article>
+                <h1>Normal H1 Heading</h1>
+            </article>
+            <article>
+                <blog-headline type="cats" newpost>Blog Post About Kittens</blog-headline>               
+            </article>
+            <article>
+                <blog-headline type="dogs">Blog Post About Puppies</blog-headline>   
+            </article>
+        </main>
+        <script>
+            class BlogHeadline extends HTMLElement {
+                static get observedAttributes() {
+                    return ["type", "newpost"];
+                }
+
+                constructor() {
+                    super();
+                    this._heading = this.textContent;
+                    this.textContent = "";
+                    
+                    this.attachShadow({ mode: "open" });
+                    
+                    this.headingElement = document.createElement("h1");
+                    this.headingElement.textContent = this._heading;
+
+                    this.styleElement = document.createElement("style");
+                    this.styleElement.innerText = `.new-post::after { font-weight: bold; content: "⏰ NEW! ⏰"; margin-left: 8px; }`;
+                    this.shadowRoot.appendChild(this.styleElement);
+                    this.shadowRoot.appendChild(this.headingElement);
+                }
+
+                connectedCallback() {
+                  this.setIcon(this.type);
+                }
+
+                disconnectedCallback() {
+                    console.log("Disconnected");
+                }
+
+                attributeChangedCallback(name, oldValue, newValue) {
+                    if (oldValue === newValue) { return; }
+                    if (name === "type") {
+                        this.setIcon(this.type);
+                    }
+                    else if (name === "newpost") {
+                        this.setIsNewPostIcon(this.newpost);
+                    }
+                }
+
+                get heading() {
+                    return this._heading;
+                }
+
+                get type() {
+                    return this.getAttribute("type");
+                }
+
+                set type(newValue) {
+                    this.setAttribute("type", newValue);
+                    this.setIcon(this.type);
+                }
+
+                get newpost() {
+                    return this.hasAttribute("newpost");
+                }
+
+                set newpost(newValue) {
+                    if (newValue) { 
+                        this.setAttribute("newpost", "");
+                    }
+                    else { 
+                        this.removeAttribute("newpost"); 
+                    }
+                    this.setIsNewPostIcon(this.newpost);
+                }
+
+                setIcon(type) {
+                    if (type === "cats") {
+                        this.headingElement.textContent = "🐱 " + this.heading + " 🐱";
+                    }
+                    else if (type === "dogs") {
+                        this.headingElement.textContent = "🐶 " + this.heading + " 🐶";
+                    }
+                }
+
+                setIsNewPostIcon(isNewPost) {
+                    if (isNewPost) {
+                        this.headingElement.classList.add("new-post");
+                    }
+                    else {
+                        this.headingElement.classList.remove("new-post");
+                    }
+                }
+            }
+
+            window.customElements.define("blog-headline", BlogHeadline);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+            <styled-text theme="dark">The castle stood tall.</styled-text>
+            <styled-text theme="light">The castle stood tall.</styled-text>
+            <styled-text theme="highlight">The castle stood tall.</styled-text>
+            <script>
+                class StyledText extends HTMLElement {
+                    constructor() {
+                            super();
+                            if (this.hasAttribute("theme")) {
+                                this.setStyle(this.theme);
+                            }
+                            else {
+                                // default to light theme
+                                this.theme = "light";
+                            }
+                    }
+
+                    setStyle(theme) {
+                        switch (theme) {
+                            case "highlight": 
+                                this.style.backgroundColor = "yellow";
+                                this.style.color = "black";
+                                break;
+                            case "light":
+                                this.style.color = "black";
+                                this.style.backgroundColor = "white";
+                                break;
+                            case "dark":
+                                this.style.color = "white";
+                                this.style.backgroundColor = "black";
+                                break;
+                        }
+                    }
+
+                    get theme() {
+                        return this.getAttribute("theme");
+                    }
+
+                    set theme(newValue) {
+                        this.setAttribute("theme", newValue);
+                        this.setStyle(this.theme);
+                    }
+                }
+
+                 customElements.define("styled-text", 
+                    StyledText
+                 );
+            </script>
+            
+    </body>
+</html>

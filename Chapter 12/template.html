@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Template</title></head>
+    <body>	
+    <template id="styled-button-template">
+       <style>
+            .btn {
+                -webkit-appearance: none;
+               appearance: none;					
+               background-color: #3700B3;
+               border: none;
+               border-radius: 2px;
+               color: white;
+               cursor: pointer;
+               min-width: 64px;
+               outline: none;
+               padding: 4px 8px;
+           }
+           
+            .btn:hover {
+                 background-color: #6200EE;
+           }
+        </style>
+        <button class="btn primary-btn"><slot>Label</slot></button>
+   </template>
+    <script>
+       class StyledButton extends HTMLElement {
+           constructor() {
+               super();
+               this.attachShadow({ mode: "open" });
+           }
+
+           connectedCallback() {
+               const buttonTemplate = document.getElementById("styled-button-template");
+               const node = document.importNode(buttonTemplate.content, true);
+               this.shadowRoot.appendChild(node);
+           }
+       }
+
+       window.customElements.define("styled-button", StyledButton);
+    </script>
+    <styled-button></styled-button>
+    <styled-button>OK</styled-button>
+    <styled-button>Cancel</styled-button>
+</body>
+</html>

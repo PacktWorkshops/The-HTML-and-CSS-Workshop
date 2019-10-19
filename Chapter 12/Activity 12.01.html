@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>Films on Demand - Profile</title>
+ 		<meta name="description" content="Buy films from our great selection. Watch movies on demand.">
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+           <link href=”styles/normalize.css” rel=”stylesheet”>
+           <style>
+            html {
+                box-sizing: border-box;
+            }
+            
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+ 
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+ 
+		 #pageWrapper {
+                background-color: #eeeae4;
+            }
+ 
+            .full-page {
+                min-height: 100vh;
+            }
+ 
+            h1 {
+                margin: 0;
+                padding: 0 0 16px 0;
+            }
+           </style>
+ 	</head>
+ 	<body>
+        <div id="pageWrapper" class="full-page">
+            <fod-profile>
+            
+            </fod-profile>
+        </div>
+     </body>
+     <template id="fod-profile-template">
+        <style>
+            .profile-container {
+                display: flex;
+                padding: 16px;
+            }
+
+            .profile-body {
+                display: flex;
+                margin: 16px;
+                background-color: #fff;
+                border-radius: 3px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            }
+
+            .avatar {                
+                line-height: 0;
+                margin: 8px;
+            }
+
+            .info {
+                padding: 8px 16px 8px 8px;
+            }
+
+            .attribute {
+                font-weight: bold;
+            }
+        </style>
+        <section class="profile-container">
+            <div class="profile-body">
+                <div class="avatar"><slot name="avatar"><img src="media/placeholder.png"></slot></div>
+                <div class="info">
+                    <p class="name"><span class="attribute">Name:</span> <slot name="name">John Doe</slot></p>
+                    <p class="email"><span class="attribute">E-mail:</span> <slot name="email">john.doe@gmail.com</slot></p>
+                </div>   
+            </div>
+        </section>
+    </template>
+    <script>
+        customElements.define("fod-profile", class FODProfile extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: "open" });
+            }
+
+            connectedCallback() {
+                const tmpl = document.getElementById("fod-profile-template");
+                const node = document.importNode(tmpl.content, true);
+                this.shadowRoot.appendChild(node);     
+            }
+        });
+    </script>
+</html>

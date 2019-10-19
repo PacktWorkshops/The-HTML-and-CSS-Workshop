@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise 12.03: Custom Element with Attributes</title>
+        <style>
+            .test-ui {
+                margin-top: 2rem;
+            }
+
+            .new-post::before {
+                font-weight: bold;
+                content: "⏰ NEW! ⏰";
+            }
+        </style>
+    </head>
+    <body>
+        <main class="blog-posts">
+            <article>
+                <blog-headline id="cat-headline" type="cats" newpost>Blog Post About Kittens</blog-headline>               
+            </article>
+            <article>
+                <blog-headline type="dogs">Blog Post About Puppies</blog-headline>   
+            </article>
+        </main>
+        <div class="test-ui">
+            <button id="swap-type-1">Swap type attribute</button>
+            <button id="swap-newpost-1">Swap newpost attribute</button>
+            <button id="toggle-connect-1">Toggle connection</button>
+        </div>
+        <script>
+            class BlogHeadline extends HTMLElement {
+                static get observedAttributes() {
+                    return ["type", "newpost"];
+                }
+
+                constructor() {
+                    super();
+                    this.heading = this.textContent;
+                }
+
+                connectedCallback() {
+                  console.log("Connected");
+                  this.setIcon(this.type);
+                }
+
+                disconnectedCallback() {
+                    console.log("Disconnected");
+                }
+
+                attributeChangedCallback(name, oldValue, newValue) {
+                    if (oldValue === newValue) { return; }
+                    if (name === "type") {
+                        this.setIcon(this.type);
+                    }
+                    else if (name === "newpost") {
+                        this.setIsNewPostIcon(this.newpost);
+                    }
+                }
+
+                get heading() {
+                    return this._heading;
+                }
+
+                get type() {
+                    return this.getAttribute("type");
+                }
+
+                set type(newValue) {
+                    this.setAttribute("type", newValue);
+                    this.setIcon(this.type);
+                }
+
+                get newpost() {
+                    return this.hasAttribute("newpost");
+                }
+
+                set newpost(newValue) {
+                    if (newValue) { 
+                        this.setAttribute("newpost", "");
+                    }
+                    else { 
+                        this.removeAttribute("newpost"); 
+                    }
+                    this.setIsNewPostIcon(this.newpost);
+                }
+
+                setIcon(type) {
+                    if (type === "cats") {
+                        this.textContent = "🐱 " + this.heading + " 🐱";
+                    }
+                    else if (type === "dogs") {
+                        this.textContent = "🐶 " + this.heading + " 🐶";
+                    }
+                }
+
+                setIsNewPostIcon(isNewPost) {
+                    if (isNewPost) {
+                        this.classList.add("new-post");
+                    }
+                    else {
+                        this.classList.remove("new-post");
+                    }
+                }
+            }
+            window.customElements.define("blog-headline", BlogHeadline);
+
+            const headline = document.querySelector("blog-headline");
+            const headlineParent = headline.parentElement;
+            const swapTypeButton = document.getElementById("swap-type-1");
+            const swapNewpostButton = document.getElementById("swap-newpost-1");
+            const toggleConnectionButton = document.getElementById("toggle-connect-1");
+
+            swapTypeButton.addEventListener("click", function() {
+                const type = headline.getAttribute("type");
+                headline.setAttribute("type", type === "cats" ? "dogs" : "cats")
+            });
+
+            swapNewpostButton.addEventListener("click", function() {
+                const newpost = headline.hasAttribute("newpost");
+                if (newpost) {
+                    headline.removeAttribute("newpost");
+                }
+                else {
+                    headline.setAttribute("newpost", "");
+                }
+            });
+
+            toggleConnectionButton.addEventListener("click", function() {
+                if (headline.parentElement) {
+                    headlineParent.removeChild(headline);
+                }
+                else {
+                    headlineParent.insertBefore(headline, headlineParent.firstChild);
+                }
+            });
+        </script>
+    </body>
+</html>

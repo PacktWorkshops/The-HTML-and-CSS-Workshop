@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 12.04: Extending HTMLAnchorElement</title>
+    </head>
+    <body>
+        <main class="blog-post">
+            <ul class="links">
+                <li><a is="anchor-info" href="https://www.packtpub.com/web-development">Link that opens in current window</a></li>
+                <li><a is="anchor-info" href="https://www.packtpub.com/free-learning" target="_blank">Link that opens in a new window.</a></li>    
+            </ul>
+        </main>
+        <script>
+            class AnchorInfo extends HTMLAnchorElement {
+                static get observedAttributes() {
+                    return ["target"];
+                }
+
+                constructor() {
+                    super();
+                    this._originalText = this.textContent;
+                }
+
+                attributeChangedCallback(name, oldValue, newValue) {
+                    if (oldValue === newValue) { return; }
+                    switch (name) {
+                        case "target":
+                            this.checkTarget();
+                            break;
+                    }
+                }
+
+                checkTarget() {
+                    this.opensInNewTab = this.target === "_blank";
+                    this.render();
+                }
+
+                render() {
+                    const targetState = this.opensInNewTab ? " ⧉" : "";
+                    this.textContent = this._originalText + targetState
+                }
+            }
+
+            window.customElements.define("anchor-info", AnchorInfo, { extends: "a"});
+        </script>
+    </body>
+</html>
