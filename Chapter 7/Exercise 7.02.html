@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 7.02: Styling Controls</title>
+        <style>
+            .audio-player, 
+            .audio-controls,
+            .audio-controls .button {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                font-weight: 200;
+            }
+
+            .audio-controls {
+                align-items: center;
+                background-color: #0E0B16;
+                border: 3px solid #E7DFDD;
+                border-radius: 30px;
+                display: flex;
+                justify-content: space-between;
+                max-width: 240px;
+                padding: 8px;
+            }
+
+            .audio-controls .button {
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: #4717F6;
+                border: 1px solid #E7DFDD;
+                border-radius: 16px;
+                cursor: pointer;
+                outline: none;
+                padding: 4px 16px;
+                text-transform: uppercase;
+            }
+
+            .audio-status {
+                margin-right: 16px;
+            }   
+
+            [data-state="playing"] #play-btn,
+            [data-state="paused"] #pause-btn {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="audio-player" class="audio-player">
+            <audio id="audio-1" src="media/track1.ogg">
+                Your browser does not support the HTML5 <code>audio</code> element.
+            </audio>
+            <div class="audio-controls">
+                <button id="play-btn" class="button">Play</button>
+                <button id="pause-btn" class="button">Pause</button>
+                <div class="audio-status">
+                    <span id="played">00:00</span> / <span id="duration">00:00</span>
+                </div>
+            </div>
+            <script>
+                const audioPlayer = document.getElementById('audio-player');
+                const audio1 = document.getElementById('audio-1');
+                const playButton = document.getElementById('play-btn');
+                const pauseButton = document.getElementById('pause-btn');
+                const duration = document.getElementById('duration');
+                const played = document.getElementById('played');
+
+                audioPlayer.dataset.state = "paused";
+
+                playButton.addEventListener('click', function() {
+                    if (audioPlayer.dataset.state === 'paused') {
+                        audio1.play();
+                        audioPlayer.dataset.state = 'playing';
+                    }
+                });
+
+                pauseButton.addEventListener('click', function() {
+                    if (audioPlayer.dataset.state === 'playing') {
+                        audio1.pause();
+                        audioPlayer.dataset.state = 'paused';
+                    }
+                });
+
+                audio1.addEventListener('loadedmetadata', function(event) {
+                    duration.textContent = formatTime(audio1.duration);
+                });
+
+                audio1.addEventListener('timeupdate', function(event) {
+                    played.textContent = formatTime(audio1.currentTime);
+                });
+
+                function formatTime(time) {
+                    const minutes = Math.floor(time / 60);
+                    const seconds = Math.round(time) % 60;
+                    return `${
+                            minutes < 10 ? '0' + minutes : minutes
+                        }:${
+                            seconds < 10 ? '0' + seconds : seconds 
+                        }`;
+                }
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Films on Demand - <!-- Title for page goes here --></title>
+        <meta name="description" content="Buy films from our great selection. Watch movies on demand.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles/normalize.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            #pageWrapper {
+                background-color: #eeeae4;
+            }
+
+            .full-page {
+                min-height: 100vh;
+            }
+
+            .media-player {
+                position: relative;
+                margin: 0 auto;
+                padding-top: 24px;
+                width: 768px;
+            }
+
+            video {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .media-player, 
+            .controls,
+            .controls .button {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                font-weight: 200;
+            }
+
+            .controls {
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.75);
+                bottom: 5px;
+                display: flex;
+                justify-content: space-between;
+                margin: 0;
+                padding: 10px 0;
+                position: absolute;
+                width: 100%;
+            }
+
+            .controls .button {
+                -webkit-appearance: none;
+                appearance: none;
+                background-color: #4717F6;
+                border: 1px solid #E7DFDD;
+                border-radius: 3px;
+                cursor: pointer;
+                outline: none;
+                padding: 4px 16px;
+                text-transform: uppercase;
+                min-width: 128px;
+                margin-left: 8px;
+            }
+
+            .status {
+                margin-right: 16px;
+            }   
+
+            [data-state="playing"] #play-btn,
+            [data-state="paused"] #pause-btn {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="pageWrapper" class="full-page">
+            <div id="media-player" class="media-player">
+                <video id="media-1" poster="media/poster.png" preload="metadata">
+                    <source src="media/html_and_css.webm" type="video/webm" />
+                    <source src="media/html_and_css.mp4" type="video/mp4" />
+                     It looks like your browser does not support <code>video</code>.
+                </video>
+                <div class="controls">
+                    <button id="play-btn" class="button">Play</button>
+                    <button id="pause-btn" class="button">Pause</button>
+                    <div class="status">
+                        <span id="played">00:00</span> / <span id="duration">00:00</span>
+                    </div>
+                </div>
+                <script src="scripts/media-controls.js"></script> 
+            </div>      
+        </div>
+    </body>
+</html>

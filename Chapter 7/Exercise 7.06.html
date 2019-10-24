@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang=”en”>
+    <head>
+        <title>Exercise 7.06</title>
+        <style> canvas { border: 1px solid gray; } </style>
+    </head>
+    <body>
+        <canvas width="320" height="240" id="canvasArea"></canvas>
+        <script>
+            function drawSky(context) {
+                const gradient = context.createRadialGradient(120, 160, 0, 120, 160, 160);
+                gradient.addColorStop(0.3, "#030339");
+                gradient.addColorStop(0.6, "#00F260");
+                gradient.addColorStop(1, "#030339");
+
+                context.fillStyle = gradient;
+                context.fillRect(0, 0, canvasElement.width, canvasElement.height);
+            }
+
+            function drawIgloo(context) {
+                context.fillStyle = "white";
+
+                context.arc(120, 160, 60, 0, Math.PI * 2, false);
+                context.fill();
+                
+                context.fillRect(160, 135, 30, 50); // igloo door
+
+                context.strokeStyle = "#cffcff";
+                context.lineWidth = 4;
+                context.fillStyle = "#030339";
+
+                context.beginPath();
+                context.arc(194, 160, 23, 0, Math.PI * 2, false);
+                context.fill();
+                context.stroke();
+            }
+
+            function drawFloor(context) {
+                const gradient = context.createLinearGradient(0, 160, 0, 240);
+                gradient.addColorStop(0.05, "#cffcffcf");
+                gradient.addColorStop(0.65, '#cffcff');
+
+                context.fillStyle = gradient;
+                context.fillRect(0, 160, canvasElement.width, 80);
+            }
+
+            function drawFrame(context) {
+                context.clearRect(0, 0, canvasElement.width, canvasElement.height);
+                drawSky(context);
+                drawIgloo(context);
+                drawFloor(context);
+            }
+
+            const canvasElement = document.getElementById('canvasArea');
+            if (canvasElement.getContext) {
+                const context = canvasElement.getContext('2d');
+                drawFrame(context);
+            }
+        </script>
+    </body>
+</html>

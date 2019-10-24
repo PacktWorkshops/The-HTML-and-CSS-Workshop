@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="canvasArea" width="320" height="240">
+            Your browser does not support the <code>canvas</code> element.
+        </canvas>
+        <script>
+            const canvasElement = document.getElementById("canvasArea");
+            if (canvasElement.getContext) {
+                const context = canvasElement.getContext("2d");
+
+                context.fillStyle = "red";
+                context.arc(50, 50, 25, 0, Math.PI * 2, false);
+                context.fill();
+            }
+        </script>
+    </body>
+</html>
