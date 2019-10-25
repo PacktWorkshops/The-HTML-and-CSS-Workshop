@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS transitions enhanced control</title>
+    <style>
+      /* Let’s put our style in here */
+      .transition-me {
+        transition-duration: 0.5s, 0.5s, 0.3s;
+        transition-delay: 0s, 0.5s, 1s;
+        transition-property: background, color, padding-left;
+        cursor: pointer;
+        /* those properties will be animated from */
+        padding: 16px;
+        color: chocolate;
+        background: ghostwhite;
+      }
+
+      .transition-me:hover {
+        /* those properties will be animated to */
+        background: honeydew;
+        color: purple;
+        padding-left: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-me">
+      CSS transitions enhanced control
+    </div>
+  </body>
+</html>

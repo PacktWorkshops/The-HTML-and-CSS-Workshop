@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS animations preloader</title>
+    <style>
+      /* Let’s put our style in here */
+      .preloader-wrapper {
+        border-radius: 16px;
+        height: 32px;
+        overflow: hidden;
+        background-color: dodgerblue;
+        position: relative;
+      }
+
+      .preloader-bar {
+        height: 100%;
+        background-color: darkgoldenrod;
+        animation: preloader 5s ease-in-out 1s;
+      }
+
+      @keyframes preloader {
+        0% { width: 0 }
+        50% { width: 25% }
+        100% { width: 100% }
+      }
+
+      .preloader-percentage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        animation: preloader-value 5s steps(1) forwards;
+      }
+
+      .preloader-value {
+        height: 100%;
+        line-height: 32px;
+        text-align: center;
+        color: whitesmoke;
+      }
+
+      @keyframes preloader-value {
+        from {top: 0}
+        50% {top: -32px}
+        to {top: -64px}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preloader-wrapper">
+      <div class="preloader-bar"></div>
+      <div class="preloader-percentage">
+        <div class="preloader-value">0%</div>
+        <div class="preloader-value">25%</div>
+        <div class="preloader-value">100%</div>
+      </div>
+    </div>
+  </body>
+</html>

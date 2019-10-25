@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple CSS animations</title>
+    <style>
+      /* Let’s put our style in here */
+
+      .transition-me {
+        transition-duration: 0.2s;
+        padding: 16px;
+        cursor: pointer;
+        /* those properties will be animated from */
+        color: darkorange;
+        background: black;
+      }
+
+      .transition-me:hover {
+        /* those properties will be animated to */
+        background: orangered;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-me">
+      CSS Animations are fun!
+    </div>
+  </body>
+</html>

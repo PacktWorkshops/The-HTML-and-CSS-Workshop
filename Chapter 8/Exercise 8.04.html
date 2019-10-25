@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS transition with multiple values</title>
+    <style>
+      /* Let’s put our style in here */
+      .transition-me {
+        height: 100px;
+        background: lightskyblue;
+        border: 10px solid wheat;
+        cursor: pointer;
+        transition: background 0.5s, border 0.3s 1s, font-size 0.5s;
+      }
+
+      .transition-me:hover {
+        /* those properties will be animated to */
+        background: orange;
+        font-size: 32px;
+        border-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transition-me">
+      CSS transition with multiple values
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: hsl(0, 0%, 100%);
+}
+pre {
+	background: hsl(0, 0%, 93%);
+}
+abbr,
+acronym {
+	border-bottom: 1px dotted hsl(0, 0%, 40%);
+}
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+body {
+	background: hsl(0, 0%, 100%); 
+}
+hr {
+	background-color: hsl(0, 0%, 20%);
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: hsl(195, 53%, 79%);
+}
+
+a:visited {
+	color: hsl(261, 45%, 73%);
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: hsl(225, 73%, 57%);
+}
+
+.content-area {
+    background: hsl(0, 0%, 0%);
+}
+header.site-header h1 {
+    color: hsl(25, 64%, 80%);
+}
+header.site-header h1 a {
+    color: hsl(25, 64%, 80%);
+}
+header.site-header nav .menu,
+header.site-header nav li a {
+    color: hsl(196, 100%, 83%);
+}
+.blog .site-header,
+.single-post .site-header{
+	background: hsl(224, 100%, 17%);
+}
+article h1 {
+    color: hsl(97, 48%, 71%);
+}
+article .content {
+    color: hsl(0, 0%, 60%);
+}
+article picture img {
+    border-top: 2px solid hsl(244, 89%, 68%);
+    border-bottom: 4px solid hsl(244, 89%, 68%)
+}
+footer.site-footer {
+    color: hsl(205, 64%, 20%);
+    background: hsl(224, 100%, 83%);
+}
+footer.site-footer a {
+    color: hsl(0, 0, 100%);
+    background: hsl(155, 36%, 80%);
+}
+

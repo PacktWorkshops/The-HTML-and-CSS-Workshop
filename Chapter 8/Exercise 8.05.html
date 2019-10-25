@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS transition with multiple values</title>
+    <style>
+      /* Let’s put our style in here */
+      body {
+        background-color: silver;
+      }
+      .top-navigation-menu {
+        display: flex;
+        text-transform: uppercase;
+        font-family: Arial;
+      }
+
+      .top-navigation-link {
+        height: 28px;
+        position: relative;
+        width: 225px;
+        display: inline-block;
+      }
+
+      .top-navigation-link:before,
+      .top-navigation-link:after {
+        text-align: center;
+        line-height: 28px;
+        content: attr(title);
+        position: absolute;
+        left: 0;
+        right: 0;
+        transition: 250ms;
+        transition-timing-function: cubic-bezier(.93,.45,.73,1.3);
+        color: whitesmoke;
+        pointer-events: none;
+      }
+
+      .top-navigation-link:before {
+        top: 0;
+        filter: blur(0);
+        opacity: 1;
+        background-color: cadetblue;
+      }
+
+      .top-navigation-link:after {
+        top: 28px;
+        filter: blur(5px);
+        opacity: 0;
+        background-color: firebrick;
+      }
+
+      .top-navigation-link:hover:before {
+        top: -28px;
+        filter: blur(5px);
+        opacity: 0;
+      }
+
+      .top-navigation-link:hover:after {
+        top: 0;
+        filter: blur(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
+<body>
+  <nav class="top-navigation-menu">
+    <a class="top-navigation-link" href="https://www.google.com" title="Top Search Engine"></a>
+    <a class="top-navigation-link" href="https://www.packtpub.com/all-products" title="Free Coding Resource"></a>
+    <a class="top-navigation-link" href="https://www.packtpub.com/free-learning" title="Free PRO Coding"></a>
+  </nav>
+</body>
+</html>
