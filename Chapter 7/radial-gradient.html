@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=”en”>
+    <head>
+        <style> canvas { border: 1px solid gray; } </style>
+    </head>
+    <body>
+        <canvas width="320" height="240" id="canvasArea"></canvas>
+        <script>
+            function drawFrame(context) {
+                const gradient = context.createRadialGradient(
+                    canvasElement.width * 0.5, 
+                    canvasElement.height * 0.5, 
+                    16,
+                    canvasElement.width * 0.5,
+                    canvasElement.height * 0.5,
+                    canvasElement.width * 0.5
+                );
+                gradient.addColorStop(0, 'white');
+                gradient.addColorStop(1, 'black');
+
+                context.fillStyle = gradient;
+                context.fillRect(0, 0, canvasElement.width, canvasElement.height);
+            }
+
+            const canvasElement = document.getElementById('canvasArea');
+            if (canvasElement.getContext) {
+                const context = canvasElement.getContext('2d');
+                drawFrame(context);
+            }
+        </script>
+    </body>
+</html>

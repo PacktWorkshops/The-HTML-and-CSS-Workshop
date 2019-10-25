@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=”en”>
+	<head>
+		<meta charset=”utf-8”>
+		<title>Exercise 7.04: Adding Subtitles</title>
+		<style>
+			.video-container {
+				max-width: 1080px;
+                margin: 16px auto;
+			}
+ 
+  			.video-container video {
+ 				width: 100%;
+            }
+ 		</style>  		
+	</head>
+	<body>
+ 	<div class="video-container">
+             <video id="video-1" poster="media/poster.png" controls>
+                <source src="media/html_and_css.webm" type="video/webm">
+				<source src="media/html_and_css.mp4" type="video/mp4">
+				<track src="media/subtitles-en.vtt" kind="subtitles" label="English" srclang="en" default>
+				<track src="media/subtitles-es.vtt" kind="subtitles" label="Español" srclang="es">
+				Your browser does not support the HTML5 <code>video</code> element.
+ 		</video>
+	</div>
+	</body>
+</html>
