@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<<<<<<< HEAD:Chapter 13/Exercise 13.01.html
+	   <meta charset=”utf-8”>
+	   <title>Exercise 13.01: Browser support</title>
+=======
+	   <meta charset="utf-8">
+	   <title>Exercise 1: Browser support</title>
+>>>>>>> aa41fcfe6fd86c2233265865ac51d7031af5fe19:Chapter 13/exercise_1.html
+        <style>
+         body {
+             padding: 0;
+             margin: 0;
+             box-sizing: border-box;
+             font-family: Arial, Helvetica, sans-serif;
+         }
+
+         *, *::after, *::before {
+             box-sizing: inherit;
+         }
+         
+         .header {
+             border-bottom: 1px solid gray;
+         }
+
+         .nav {
+             border-right: 1px solid gray;
+         }
+
+         .nav ul {
+             list-style-type: none;
+             margin: 0;
+             padding:0;
+             width: 100%;
+         }
+
+         .nav ul li {
+             width: 100%;
+             margin: 0;
+             padding: 16px 8px;
+         }
+
+         .current {
+             background: lightgray;
+             border-bottom: 1px solid gray;
+         }
+
+         .main {
+             display: block;
+             padding: 16px;
+             overflow:auto;
+         }
+
+         .advertisement {
+             padding: 16px;
+             border-left: 1px solid gray;
+             background: greenyellow;
+         }
+
+         .footer {
+             background: black;
+             color: white;
+             padding: 0 1rem;
+         }
+
+         .grid {
+             display: -ms-grid;
+             display: grid;
+             height: 100vh;
+             -ms-grid-rows: 100px 1fr 100px;
+             grid-template-rows: 100px 1fr 100px;
+             -ms-grid-columns: 100px 1fr 200px;
+             grid-template-columns: 100px 1fr 200px;
+             grid-template-areas: 
+                "header header advert"
+                "nav main advert"
+                "footer footer footer";
+         }
+
+         .grid .footer { 
+             -ms-grid-row: 3;
+             -ms-grid-column: 1;
+             -ms-grid-column-span: 3;
+             grid-area: footer; 
+         }
+
+         .grid .header { 
+             -ms-grid-row: 1;
+             -ms-grid-column: 1;
+             -ms-grid-column-span: 2;
+             grid-area: header; 
+         }
+
+         .grid .main { 
+            -ms-grid-row: 2;
+            -ms-grid-column: 2;
+            grid-area: main; 
+         }
+
+         .grid .nav { 
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            grid-area: nav; 
+         }
+
+        .grid .advertisement { 
+            -ms-grid-row: 1;
+            -ms-grid-column: 3;
+            -ms-grid-row-span: 2;
+            grid-area: advert; 
+        }
+        </style>
+	</head>
+	<body>
+		<div class="container grid">
+            <header class="header">
+                <h1>Browser support</h1>
+            </header>
+            <nav class="nav">
+                <ul>
+                    <li class="current">Article 1</li>
+                    <li><a href="#">Article 2</a></li>
+                </ul>
+            </nav>
+            <main class="main" aria-role="main">
+                <h2>Article 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet porttitor dolor. Nunc sodales sodales risus. Donec vitae ex tempor leo blandit egestas sed sed odio. Vivamus nisi ligula, pharetra vel nisl sed, aliquam varius tellus. Maecenas vel semper eros, a pellentesque massa. Nullam rhoncus elit metus, sed rutrum ipsum malesuada sit amet. Maecenas nibh metus, fringilla vitae vulputate varius, consectetur nec ipsum. Suspendisse vitae fermentum felis, scelerisque imperdiet quam. Duis posuere maximus ex, tincidunt hendrerit dolor commodo id.</p>
+                <p>Aenean id laoreet ligula. Ut blandit odio arcu. Sed ex felis, auctor eget lobortis quis, iaculis in enim. Cras vehicula blandit odio. Aenean at imperdiet ex, sed lobortis dolor. Vivamus vehicula consectetur sem faucibus mollis. Pellentesque ac enim a velit ullamcorper varius in et dolor. Nam ultricies, urna at luctus feugiat, ante nisl maximus sapien, in rutrum dui dui at dolor. Fusce eu lorem ipsum.</p>
+            </main>
+            <section class="advertisement">
+                <h2>Advertise here</h2>
+                <p>Want your product to be noticed?</p>
+                <p>Advertise here!</p>
+            </section>
+            <footer class="footer">
+                <p>Add Copyright info here</p>
+            </footer>
+        </div>
+	</body>
+</html>

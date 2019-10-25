@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example: custom properties</title>
+    </head>
+    <body>
+        <style>
+            :root {
+                  --dark-text-color: #131313;
+                  --light-text-color: #cfcfcf;
+            }
+            
+            p.dark {
+                 color: var(--dark-text-color);
+            }
+            
+            p.light {
+                color: var(--light-text-color);
+            }
+            
+           </style>
+           <p class="light">Lorem ipsum. Copy testing a LIGHT typography theme.</p>           
+           <p class="dark">Lorem ipsum. Copy testing a DARK typography theme.</p>
+    </body>
+</html>

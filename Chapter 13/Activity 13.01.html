@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Activity 13.01: Buttons</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="actions">
+            <button class="button button--primary">
+                Primary
+            </button>
+            <button class="button button--secondary">
+                Secondary
+            </button>
+            <button class="button button--ghost">
+                Ghost
+            </button>
+            <button class="button button--special">
+                Special
+            </button>
+        </div>
+        <style>
+            :root {
+                --primary-fill-color: #f44336;
+                --secondary-fill-color: #ff9900;
+            }
+
+            .button {
+                outline: none;
+                user-select: none;
+                -webkit-appearance: none;
+                appearance: none;
+                margin: 16px;
+                min-width: 128px;
+                min-height: 32px;
+                padding: 8px 16px;
+                font-size: 24px;
+                border: 2px solid #fcfcfc;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            .button--primary {
+                background: #f44336;
+                color: white;
+                font-weight: bold;
+            }
+
+            .button--primary:hover {
+                background: #ff9900;
+            }
+
+            .button--secondary {
+                background: #9e9e9e;
+                color: white;
+                font-weight: normal;
+            }
+
+            .button--secondary:hover {
+                background: #7c7c7c;
+            }
+
+            .button--ghost {
+                border-color: #9e9e9e;
+                background: white;
+                color: #9e9e9e;
+                font-weight: normal;
+            }
+
+            .button--ghost:hover {
+                background: #efefef;
+            }
+
+            .button--special {
+                background: #f44336 paint(animated-gradient);
+                color: white;
+                font-weight: bold;
+                transition: --primary-fill-color 0.5s, --secondary-fill-color 0.7s;
+            }
+
+            .button--special:hover {
+                background-color: #ff9900;
+                --secondary-fill-color: #f44336;
+                --primary-fill-color: #ff9900;
+            }
+        </style>
+        <script>
+            if (window.CSS) {
+                if ("registerProperty" in CSS) {
+                    CSS.registerProperty({
+                        name: "--primary-fill-color",
+                        syntax: "<color>",
+                        inherits: false,
+                        initialValue: "#f44336"
+                    });
+
+                    CSS.registerProperty({
+                        name: "--secondary-fill-color",
+                        syntax: "<color>",
+                        inherits: false,
+                        initialValue: "#ff9900"
+                    });
+                }
+
+                if ("paintWorklet" in CSS) {
+                    CSS.paintWorklet.addModule("gradient-paint.js");
+                }
+            }
+        </script>
+    </body>
+</html>

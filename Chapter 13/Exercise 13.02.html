@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 13.02: A Simple Paint Worklet</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="red-background">
+            This div should have a red background.
+        </div>
+        <style>
+            .red-background {
+                background: paint(red-fill);
+                color: white;
+                box-sizing: border-box;
+                width: 100%;
+                height: 100px;
+                padding: 16px;
+            }
+        </style>
+        <script>
+            CSS.paintWorklet.addModule("red-fill-paint.js");
+        </script>
+    </body>
+</html>

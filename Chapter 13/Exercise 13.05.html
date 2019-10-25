@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 13.05: Animated Paint Worklet</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="centered-content">
+            <button class="button pointer centered-content">
+                Click me!
+            </button>
+        </div>
+        <style>
+            :root {
+                --position-x: 0;
+                --position-y: 0;
+            }
+
+            .centered-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .button {
+                outline: none;
+                user-select: none;
+                -webkit-appearance: none;
+                appearance: none;
+                margin: 16px;
+                width: 375px;
+                height: 150px;
+                padding: 16px;
+                font-size: 24px;
+            }
+
+            .pointer {
+                background: paint(pointer);
+                color: white;
+                transition: --size 1s, --primary-fill-color 0.5s, --secondary-fill-color 0.5s;
+            }
+
+            .pointer:visited,
+            .pointer:active {
+                --secondary-fill-color: #7200ca;
+                --size: 10;
+            }
+        </style>
+        <script>
+            const mouseInput = document.querySelector(".pointer");
+            mouseInput.addEventListener("mousemove", () => {
+                document.documentElement.style.setProperty("--position-x", event.offsetX);
+                document.documentElement.style.setProperty("--position-y", event.offsetY);
+            });
+
+            CSS.registerProperty({
+                name: "--primary-fill-color",
+                syntax: "<color>",
+                inherits: false,
+                initialValue: "#7200ca"
+            });
+            CSS.registerProperty({
+                name: "--secondary-fill-color",
+                syntax: "<color>",
+                inherits: false,
+                initialValue: "#12005e"
+            });
+            CSS.registerProperty({
+                name: "--size",
+                syntax: "<number>",
+                inherits: false,
+                initialValue: 0.05
+            });
+
+            CSS.paintWorklet.addModule("pointer-input-paint.js");
+        </script>
+    </body>
+</html>
