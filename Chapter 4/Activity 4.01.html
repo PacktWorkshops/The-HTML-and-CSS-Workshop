@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Activity 1</title>
+    <style>
+      body {
+        font-family: arial, sans-serif;
+      }
+
+      fieldset {
+        border: 0;
+        padding: 0;
+        width: 900px;
+      }
+
+      fieldset > div {
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input,
+      select {
+        border: 1px solid grey;
+        padding: 10px;
+        width: 200px;
+      }
+
+      select {
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        color: #666;
+        -webkit-appearance: none;
+        width: 100%;
+      }
+
+      .select-wrapper {
+        position: relative;
+        width: 100%;
+      }
+
+      .select-wrapper:after {
+        content: "<>";
+        color: #666;
+        font-size: 14px;
+        top: 8px;
+        right: 0;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: -1;
+      }
+
+      button {
+        background: green;
+        border: 0;
+        color: white;
+        width: 224px;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+
+      .row,
+      .item {
+        display: flex;
+      }
+
+      .item {
+        margin-bottom: 15px;
+        margin-right: 30px;
+      }
+
+      .row > div {
+        flex-basis: 50%;
+      }
+
+      label {
+        margin-right: 15px;
+        line-height: 35px;
+        width: 150px;
+      }
+
+      .checkbox {
+        margin-left: 122px;
+        margin-right: 10px;
+        width: auto;
+      }
+
+      .checkbox + label {
+        width: auto;
+        line-height: 20px;
+      }
+
+      button {
+        float: right;
+        margin-right: 30px;
+      }
+
+      select:valid {
+        border: 2px solid green;
+      }
+
+      select:invalid {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="url_to_send_form_data" method="post">
+      <fieldset>
+        <h2>Property for sale in London</h2>
+
+        <div class="row">
+          <div>
+            <div class="item">
+              <label for="radius">Search radius:</label>
+              <div class="select-wrapper">
+                <select id="radius" required>
+                  <option value="only">This area only</option>
+                  <option value="1">1 mile</option>
+                  <option value="5">5 miles</option>
+                  <option value="10">10 miles</option>
+                </select>
+              </div>
+            </div>
+            <div class="item">
+              <label for="price">Price range:</label>
+              <div class="select-wrapper">
+                <select id="price" required>
+                  <option value="any">Any</option>
+                  <option value="100">Up to 100k</option>
+                  <option value="250">Up to 250k</option>
+                  <option value="500">Up to 500k</option>
+                </select>
+              </div>
+            </div>
+            <div class="item">
+              <label for="beds">Bedrooms:</label>
+              <div class="select-wrapper">
+                <select id="beds" required>
+                  <option value="any">Any</option>
+                  <option value="1">1 Bed</option>
+                  <option value="2">2 Beds</option>
+                  <option value="3">3 Beds</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="item">
+              <label for="type">Property type:</label>
+              <div class="select-wrapper">
+                <select id="type" required>
+                  <option value="any">Any</option>
+                  <option value="flat">Flat</option>
+                  <option value="house">House</option>
+                </select>
+              </div>
+            </div>
+            <div class="item">
+              <label for="date">Added to site:</label>
+              <div class="select-wrapper">
+                <select id="date" required>
+                  <option value="any">Anytime</option>
+                  <option value="24">24 hours</option>
+                  <option value="1">1 week</option>
+                </select>
+              </div>
+            </div>
+            <div class="item">
+              <input id="sold" class="checkbox" type="checkbox" name="sold" />
+              <label for="sold">Include sold properties</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit">Find properties</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

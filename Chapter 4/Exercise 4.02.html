@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Checkout form</title>
+    <style>
+      body {
+        font-family: arial, sans-serif;
+      }
+
+      fieldset {
+        border: 0;
+        padding: 0;
+      }
+
+      fieldset > div {
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      label span {
+        color: red;
+      }
+
+      input,
+      select {
+        border: 1px solid grey;
+        padding: 10px;
+        width: 200px;
+      }
+
+      select {
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        color: #666;
+        -webkit-appearance: none;
+        width: 100%;
+      }
+
+      .select-wrapper {
+        position: relative;
+        width: 222px;
+      }
+
+      .select-wrapper:after {
+        content: "<>";
+        color: #666;
+        font-size: 14px;
+        top: 8px;
+        right: 0;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: -1;
+      }
+
+      .single-input input {
+        width: 439px;
+      }
+
+      .double-input {
+        display: flex;
+      }
+
+      .double-input > div {
+        margin-right: 15px;
+      }
+
+      .checkbox input {
+        float: left;
+        width: auto;
+        margin-right: 10px;
+      }
+
+      button {
+        background: green;
+        border: 0;
+        color: white;
+        width: 224px;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+
+      input:valid,
+      textarea:valid {
+        border-bottom-color: green;
+      }
+
+      input:invalid,
+      textarea:invalid {
+        border-bottom-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Checkout</h1>
+    <form action="url_to_send_form_data" method="post">
+      <fieldset>
+        <h2>Shipping address</h2>
+        <div class="double-input">
+          <div>
+            <label for="first_name">First name: <span>*</span></label>
+            <input id="first_name" type="text" name="firstname" required />
+          </div>
+          <div>
+            <label for="last_name">Last name: <span>*</span></label>
+            <input id="last_name" type="text" name="lastname" required />
+          </div>
+        </div>
+        <div class="single-input">
+          <label for="address">Address: <span>*</span></label>
+          <input id="address" type="text" name="address" required />
+        </div>
+        <div class="double-input">
+          <div>
+            <label for="postcode">Postcode: <span>*</span></label>
+            <input id="postcode" type="text" name="postcode" required />
+          </div>
+          <div>
+            <label for="country">Country:</label>
+            <div class="select-wrapper">
+              <select id="country">
+                <option value="”england”">England</option>
+                <option value="”scotland”">Scotland</option>
+                <option value="”ireland”">Ireland</option>
+                <option value="”wales”">Wales</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <h2>Shipping method</h2>
+        <div class="checkbox">
+          <input
+            id="standard"
+            type="radio"
+            name="shipping-method"
+            value="standard"
+          />
+          <label for="standard">Standard</label>
+        </div>
+        <div class="checkbox">
+          <input
+            id="nextday"
+            type="radio"
+            name="shipping-method"
+            value="nextday"
+          />
+          <label for="nextday">Next day</label>
+        </div>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

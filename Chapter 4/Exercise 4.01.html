@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup form</title>
+    <style>
+      body {
+        font-family: arial, sans-serif;
+      }
+
+      fieldset {
+        border: 0;
+      }
+
+      fieldset > div {
+        margin-bottom: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      label span {
+        color: red;
+      }
+
+      input {
+        padding: 10px;
+        width: 200px;
+      }
+
+      input:valid {
+        border: 2px solid green;
+      }
+
+      input:invalid {
+        border: 2px solid red;
+      }
+
+      .checkbox input {
+        float: left;
+        margin-right: 10px;
+        width: auto;
+      }
+
+      button {
+        background: green;
+        border: 0;
+        color: white;
+        width: 224px;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Create new account</h1>
+    <form action="url_to_send_form_data" method="post">
+      <fieldset>
+        <div>
+          <label for="title">Title:</label><br />
+          <select id="title">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Ms">Ms</option>
+            <option value="Miss">Miss</option>
+          </select>
+        </div>
+        <div>
+          <label for="first_name">First name: <span>*</span></label>
+          <input id="first_name" type="text" name="firstname" required />
+        </div>
+        <div>
+          <label for="last_name">Last name: <span>*</span></label>
+          <input id="last_name" type="text" name="lastname" required />
+        </div>
+        <div class="checkbox">
+          <input
+            id="newsletter"
+            type="checkbox"
+            name="newsletter"
+            value="yes"
+          />
+          <label for="newsletter">Sign up for newsletter</label>
+        </div>
+        <div>
+          <label for="email">Email: <span>*</span></label>
+          <input id="email" type="email" name="email" required />
+        </div>
+        <div>
+          <label for="password">Password: <span>*</span></label>
+          <input id="password" type="password" name="password" required />
+        </div>
+        <button type="submit">Create new account</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

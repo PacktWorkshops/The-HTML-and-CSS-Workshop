@@ -1,0 +1,15 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 6px;
+}
+
+p {
+    color: red;
+}
+
+p:first-of-type {
+    color: blue;
+    text-decoration: line-through;
+}

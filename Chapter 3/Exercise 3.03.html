@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <title>Exercise 3.03</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+ 
+    .breadcrumb {
+      display: flex;
+      list-style: none;
+    }
+ 
+    .breadcrumb li {
+      padding: 10px;
+    }
+ 
+    .breadcrumb li:after {
+      content: '/';
+      margin-left: 20px
+    }
+ 
+    .breadcrumb li:last-child:after {
+      content: ''
+    }
+ 
+    .breadcrumb a {
+      color: black;
+      text-decoration: none;
+    }
+ 
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+ 
+<body>
+  <ol class="breadcrumb">
+    <li><a href="">Home</a></li>
+    <li><a href="">Used DVDs</a></li>
+    <li>Less than £10</li>
+  </ol>
+ 
+</body>
+ 
+</html>
