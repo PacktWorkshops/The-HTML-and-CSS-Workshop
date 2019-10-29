@@ -1,0 +1,8 @@
+.header {
+	text-align: center;
+
+	@media (min-width: 768px) {
+		align-items: center;
+    	display: flex;
+	}
+}

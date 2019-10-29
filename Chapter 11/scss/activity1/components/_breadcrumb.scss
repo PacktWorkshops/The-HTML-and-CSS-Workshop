@@ -1,0 +1,26 @@
+.breadcrumb {
+	&__list {
+		display: flex;
+		list-style: none;
+		background: $bg-color;
+	}
+	&__item {
+		padding: 10px;
+
+		&:after {
+	  		content: "/";
+			margin-left: 20px;
+		}
+		&:last-child:after {
+		  content: "";
+		}
+	}
+	&__link {
+		color: $primary-color;
+  		text-decoration: none;
+
+  		&:hover {
+  			text-decoration: underline;
+  		}
+	}
+}

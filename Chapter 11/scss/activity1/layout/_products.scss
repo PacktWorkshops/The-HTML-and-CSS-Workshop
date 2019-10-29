@@ -1,0 +1,46 @@
+.products {
+	margin-bottom: 30px;
+
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+	}
+
+	&__card {
+		border: 1px solid $primary-color;
+		padding: 15px;
+		margin: 10px;
+
+		@media (min-width: 768px) {
+			display: inline-block;
+		}
+	}
+
+	&__link {
+		color: $primary-color;
+		text-decoration: none;
+	}
+	&__image {
+  		width: 100%;
+	}
+	&__title {
+		margin: 30px 0 15px;
+	}
+	&__price,
+	&__saving {
+		line-height: 1.5;
+	}
+	&__price {
+		&--original {
+			color: $original-color;
+  			text-transform: uppercase;
+		}
+		&--current span {
+			font-weight: bold;
+  			text-decoration: underline;
+		}
+	}
+	&__saving {
+		color: $saving-color;
+	}
+}

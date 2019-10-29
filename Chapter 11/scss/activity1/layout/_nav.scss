@@ -1,0 +1,41 @@
+.nav {
+	margin-top: 20px;
+	background: $primary-color;
+
+	@media (min-width: 768px) {
+		background: transparent;
+		margin-top: 0;
+		margin-left: 30px;
+	}
+
+	@media only print {
+		display: none;
+	}
+
+	&__list {
+		display: flex;
+		list-style: none;
+		align-items: center;
+		justify-content: center;    
+	}
+	&__link {
+		color: $secondary-color;
+		font-weight: bold;
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+
+		@media (min-width: 768px) {
+			color: $primary-color;
+		}
+
+		&:hover {
+			color: $hover-color;
+
+			@media (min-width: 768px) {
+				text-decoration: underline;
+				color: $primary-color;
+			}
+		}
+	}
+}

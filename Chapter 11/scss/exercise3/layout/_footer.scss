@@ -1,0 +1,10 @@
+.footer {
+	background: $tertiary-color;
+	clear: both;
+	display: flex;
+	padding: 20px;
+
+	&__copyright {
+		flex: 1 1 auto;
+	}
+}

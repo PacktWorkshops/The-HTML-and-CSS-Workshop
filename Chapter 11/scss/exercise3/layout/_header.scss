@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logocontainer {
+	flex: 0 0 auto;
+
+	&__img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border: 1px solid $primary-color;
+	}
+}
