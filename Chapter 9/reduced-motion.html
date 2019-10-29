@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Reduced motion</title>
+    </head>
+    <body>
+            <div class="animation">animated box</div>
+            <style>
+                .animation {
+                    position: absolute;
+                    top: 150px;
+                    left: 150px;
+                }
+                
+                 @media (prefers-reduced-motion: no-preference) {
+                    .animation {
+                           animation: moveAround 1s 0.3s linear infinite alternate;
+                      }
+                 }
+             
+                 @keyframes moveAround {
+                     from {
+                            transform: translate(-50px, -50px);
+                      }
+                    to {
+                         transform: translate(50px, 100px); 
+                     }
+                  }
+            </style>
+            
+    </body>
+</html>

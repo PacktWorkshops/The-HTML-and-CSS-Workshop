@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 9.02: Accessible signup form</title>
+        <style>
+            html {
+                box-sizing: border-box;
+            }
+            
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.7778;
+            }
+
+            .signup {
+                margin: 1rem;
+            }
+
+            .signup-button {
+                -webkit-appearance: none;
+                appearance: none;
+                padding: .5rem 1rem;
+                background: #7e00f4;
+                color: white;
+                font-size: 1rem;
+                border-radius: 3px;
+                margin: 1rem 0;
+                outline: none;
+                float: right;
+                cursor: pointer;
+            }
+
+            .signup-button:hover, 
+            .signup-button:focus {
+                background: #500b91;
+            }
+
+            .signup label {
+                display: inline-block;
+                width: 150px;
+            }
+
+            .signup input {
+                width: 100%;
+                height: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .signup fieldset {
+                margin: 1rem 0;
+                background: #f5ffff;
+                border: 2px solid #52a752;
+            }
+        </style>
+    </head> 
+    <body>
+        <form class="signup">
+            <h2>Sign up form</h2>
+            <fieldset>
+                <legend>Add user's details:</legend>
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" />
+                <br />
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" />
+                <br />
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" />
+            </fieldset>
+            <fieldset>
+                <legend>Set a password:</legend>
+                <label for="password">Password:</label>
+                <input type="password" id="password" />
+                <br />
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" />
+            </fieldset>
+            <button type="submit" class="signup-button">Sign-up</button>
+        </form>
+    </body>
+</html>

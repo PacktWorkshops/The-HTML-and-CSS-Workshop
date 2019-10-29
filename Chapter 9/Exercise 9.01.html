@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 9.01: Accessible rating</title>
+        <style>
+        html {
+            box-sizing: border-box;
+        }
+        
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.7778;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column nowrap;
+        }
+
+        .product {
+            width: 50vw;
+            min-width: 640px;
+            margin: 2rem;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            flex-flow: column nowrap;
+            border-radius: 3px;
+            box-shadow: 
+                rgba(0, 23, 74, 0.05) 0px 6px 12px 12px, 
+                rgba(0, 23, 24, 0.1) 0 6px 6px 6px,
+                rgba(0, 23, 24, 0.3) 0 1px 0px 0px;
+        }
+
+        .product-heading {
+            margin: 0;
+        }
+
+        .product-image {
+            padding: 0;
+            margin: 2rem auto;
+            width: 60%;
+            height: 100%;
+        }
+
+        .product-description {
+            width: 100%;
+        }
+
+        .divider {
+            width: 100%;
+        }
+
+        .rating {
+            margin: 1rem auto;
+            width: 60%;
+            display: flex;
+            flex-wrap: row nowrap;
+        }
+
+        .rating img {
+            width: 20%;
+            flex-shrink: 1;
+        }
+        </style>
+    </head> 
+    <body>
+        <div class="container">
+            <section class="product">
+                <h2 class="product-heading">Product Description</h2>
+                <img class="product-image" src="images/product.png" alt="Product" width="360" height="360" />
+                <p class="product-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, sapien at tincidunt finibus, mauris purus tincidunt orci, non cursus lorem lectus ac urna. Ut non porttitor nisl. Morbi id nisi eros.
+                </p>
+                <hr class="divider" />
+                <div class="rating">
+                    <img src="images/full-star.png" alt="Rated 3 and a half out of 5 stars" />
+                    <img src="images/full-star.png" alt="" />
+                    <img src="images/full-star.png" alt="" />
+                    <img src="images/half-star.png" alt="" />
+                    <img src="images/empty-star.png" alt="" />
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
