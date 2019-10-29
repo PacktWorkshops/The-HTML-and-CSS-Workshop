@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+.team-members .member {
+  position: relative;
+  padding-top: 80%;
+}
+
+.team-members .member h2,
+.team-members .member p {
+  padding: 0 10px;
+  color: #FFF;
+  text-shadow: 0px 0px 10px black;
+}
+
+.team-members .member p {
+  padding-bottom: 10px;
+}
+
+.team-members .member-david {
+  background: url(../images/david.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-laura {
+  background: url(../images/laura.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-matt {
+  background: url(../images/matt.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-natalie {
+  background: url(../images/natalie.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-sarah {
+  background: url(../images/sarah.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-steve {
+  background: url(../images/steve.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-tahlia {
+  background: url(../images/tahlia.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+.team-members .member-will {
+  background: url(../images/will.jpg) no-repeat;
+  background-size: 100% auto;
+}

@@ -1,0 +1,46 @@
+$color-primary: #663399;
+$color-secondary: #D2691E;
+$color-tertiary: #CD5C5C;
+$fontsize-regular: 14px;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+article {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+	background: #DDD;
+	border-bottom: 1px solid $color-primary;
+}
+article:nth-child(odd) {
+	background: #FFF;
+}
+h1 {
+	font-size: 24px;
+	margin: 10px 0;
+	color: $color-primary;
+}
+h2 {
+	font-size: 20px;
+	margin: 10px 0;
+	color: $color-primary;
+}
+p {
+	margin: 10px 0;
+	font-size: $fontsize-regular;
+}
+p.primary {
+	color: $color-primary;
+}
+p.secondary {
+	color: $color-secondary;
+}
+ul li {
+	margin: 0 10px 0 20px;
+	font-size: $fontsize-regular;
+	color: $color-tertiary;
+}
+ul li:nth-child(even) {
+	color: $color-secondary;
+}

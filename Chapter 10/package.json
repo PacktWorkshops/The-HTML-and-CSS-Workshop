@@ -1,0 +1,15 @@
+{
+  "name": "chapter10",
+  "version": "1.0.0",
+  "description": "HTML5 & CSS3 Workshop Chapter10 Exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css --output-style compressed"
+  },
+  "author": "Matt Park",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

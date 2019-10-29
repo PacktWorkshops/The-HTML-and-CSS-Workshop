@@ -1,0 +1,36 @@
+@mixin transform($property, $value) {
+	@if ($property == 'skew') {
+  		-webkit-transform: skew($value); 
+  		-ms-transform: skew($value); 
+        transform: skew($value); 
+    } @else if ($property == 'scale') {
+    	-webkit-transform: scale($value); 
+  		-ms-transform: scale($value); 
+        transform: scale($value); 
+    } @else {
+    	-webkit-transform: rotate($value); 
+  		-ms-transform: rotate($value); 
+        transform: rotate($value); 
+    }
+}
+
+.transform {
+	display: inline-block;
+	position: relative;
+	top: 100px;
+	left: 100px;
+}
+
+.transform1 {
+	@include transform(rotate, 70deg);
+}
+
+.transform2 {
+	left: 150px;
+	@include transform(skew, 50deg);
+}
+
+.transform3 {
+	left: 250px;
+	@include transform(scale, 1.5);
+}

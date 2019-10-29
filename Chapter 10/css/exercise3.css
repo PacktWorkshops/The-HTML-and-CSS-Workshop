@@ -1,0 +1,26 @@
+.transform {
+  display: inline-block;
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.transform1 {
+  -webkit-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  transform: rotate(70deg);
+}
+
+.transform2 {
+  left: 150px;
+  -webkit-transform: skew(50deg);
+  -ms-transform: skew(50deg);
+  transform: skew(50deg);
+}
+
+.transform3 {
+  left: 250px;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}

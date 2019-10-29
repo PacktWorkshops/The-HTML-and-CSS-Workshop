@@ -1,0 +1,158 @@
+$primary-color: black;
+$secondary-color: white;
+$hover-color: red;
+$bg-color: lightgrey;
+$saving-color: green;
+$original-color: grey;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+header {
+	text-align: center;
+
+	@media (min-width: 768px) {
+		align-items: center;
+    	display: flex;
+	}
+}
+
+.product-cards {
+  margin-bottom: 30px;
+}
+
+nav {
+	margin-top: 20px;
+	background: $primary-color;
+
+	@media (min-width: 768px) {
+		background: transparent;
+		margin-top: 0;
+		margin-left: 30px;
+	}
+
+	@media only print {
+		display: none;
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+		align-items: center;
+		justify-content: center;    
+	}
+	a {
+		color: $secondary-color;
+		font-weight: bold;
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+
+		@media (min-width: 768px) {
+			color: $primary-color;
+		}
+
+		&:hover {
+			color: $hover-color;
+
+			@media (min-width: 768px) {
+				text-decoration: underline;
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+.breadcrumb {
+	display: flex;
+	list-style: none;
+	background: $bg-color;
+
+	li {
+		padding: 10px;
+
+		&:after {
+	  		content: "/";
+			margin-left: 20px;
+		}
+		&:last-child:after {
+		  content: "";
+		}
+	}
+	a {
+		color: $primary-color;
+  		text-decoration: none;
+
+  		&:hover {
+  			text-decoration: underline;
+  		}
+	}
+}
+
+.intro {
+	margin: 30px 0;
+	padding: 0 10px;
+
+	@media (min-width: 768px) {
+		width: 50%;
+	}
+
+	h1 {
+		margin-bottom: 15px;
+	}
+	p {
+		line-height: 1.5;
+	}
+}
+
+.product-cards {
+	@media (min-width: 768px) {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+	}
+}
+
+.product-card {
+	border: 1px solid $primary-color;
+	padding: 15px;
+	margin: 10px;
+
+	@media (min-width: 768px) {
+		display: inline-block;
+	}
+
+	a {
+		color: $primary-color;
+		text-decoration: none;
+	}
+	img {
+  		width: 100%;
+	}
+	h2 {
+		margin: 30px 0 15px;
+	}
+	p {
+		line-height: 1.5;
+	}
+}
+
+.original-price {
+  color: $original-color;
+  text-transform: uppercase;
+}
+
+.current-price span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.saving {
+  color: $saving-color;
+}
