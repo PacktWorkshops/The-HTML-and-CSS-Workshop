@@ -16,11 +16,7 @@ You already know you want to learn HTML and CSS, and a smarter way to learn HTML
 * Develop your own mobile-first approach while designing websites
 * Learn how to diagnose and resolve common style and structural problems
 
-### Hardware Requirements
-For an optimal learning experience, we recommend the following hardware configuration:
-* Processor: 1.8 GHz processor or faster (Intel Core i5 recommended)
-* Memory: 2GB RAM (8 GB recommended)
-* Storage: 35 GB available space
+### The examples of this title has been implemented in the Windows/MAC/Linux operating system.
 
 ### Software Requirements
 You'll also need the following software installed in advance:
