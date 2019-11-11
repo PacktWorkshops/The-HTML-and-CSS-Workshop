@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exercise 6.03: Print Styles</title>
+    <style>
+        header, section, aside, footer {
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            background: lightgrey;
+            margin-bottom: 20px;
+        }
+        main {
+            display: flex;
+        }
+        section {
+            text-align: left;
+            flex: 1 1 auto;
+            margin-right: 20px;  
+        }
+        section p {
+            margin: 0 0 20px;
+        }
+        section img {
+                float: left;
+                margin: 0 10px 10px 0;
+        }
+        aside {
+            flex: 0 0 200px;
+        }
+    </style>
+</head>
+ 
+<body>
+    <header>Header <!-- contains website identity (logo), useful to print --></header>
+    <main>
+        <section>
+            <img src="https://dummyimage.com/200x100/fff/000&text=Demo+Image" alt="Demo Image" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mi arcu, venenatis a egestas eu, euismod eu erat. Integer finibus porttitor mauris, nec imperdiet enim faucibus eget. Nunc a massa vel eros suscipit sollicitudin quis sit amet diam. Sed eget aliquam arcu, nec porta velit. Donec semper turpis tellus, at laoreet elit euismod bibendum. Curabitur convallis lorem massa, eget condimentum arcu pretium a. Proin sit amet turpis sapien.</p>
+            <img src="https://dummyimage.com/200x100/fff/000&text=Demo+Image" alt="Demo Image" />
+            <p>In sit amet iaculis erat, ullamcorper placerat nunc. Sed venenatis vel ligula eget laoreet. Etiam laoreet enim sed justo porttitor facilisis. Aliquam nec vehicula justo, a tristique velit. Nam velit metus, condimentum vitae eleifend vitae, venenatis eget sapien. Vivamus luctus dui at elit sollicitudin hendrerit. Vestibulum vitae diam est. Proin placerat nunc vel erat sodales, eget pellentesque dolor sollicitudin. Nam aliquam ligula erat, ut imperdiet metus venenatis a. Quisque tincidunt sem id risus euismod tempor. Sed dignissim, tortor at laoreet gravida, augue odio consectetur tellus, ac semper lorem orci eget ipsum. Ut odio sapien, malesuada ut pellentesque congue, fermentum nec libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc mattis, lacus id efficitur suscipit, dui odio suscipit dui, eget ullamcorper leo purus a diam. </p>
+            <!-- main website content for printing -->
+        </section>
+        <aside>Sidebar <!--  contains adverts, not required for printing --></aside>
+    </main>
+    <footer>Footer <!-- contains navigation, not required for printing --></footer>
+</body>
+</html>
