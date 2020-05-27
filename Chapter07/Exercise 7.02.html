@@ -68,25 +68,25 @@
 
                 audioPlayer.dataset.state = "paused";
 
-                playButton.addEventListener('click', function() {
-                    if (audioPlayer.dataset.state === 'paused') {
+                playButton.addEventListener("click", function() {
+                    if (audioPlayer.dataset.state === "paused") {
                         audio1.play();
-                        audioPlayer.dataset.state = 'playing';
+                        audioPlayer.dataset.state = "playing";
                     }
                 });
 
-                pauseButton.addEventListener('click', function() {
-                    if (audioPlayer.dataset.state === 'playing') {
+                pauseButton.addEventListener("click", function() {
+                    if (audioPlayer.dataset.state === "playing") {
                         audio1.pause();
-                        audioPlayer.dataset.state = 'paused';
+                        audioPlayer.dataset.state = "paused";
                     }
                 });
 
-                audio1.addEventListener('loadedmetadata', function(event) {
+                audio1.addEventListener("loadedmetadata", function(event) {
                     duration.textContent = formatTime(audio1.duration);
                 });
 
-                audio1.addEventListener('timeupdate', function(event) {
+                audio1.addEventListener("timeupdate", function(event) {
                     played.textContent = formatTime(audio1.currentTime);
                 });
 
@@ -94,9 +94,9 @@
                     const minutes = Math.floor(time / 60);
                     const seconds = Math.round(time) % 60;
                     return `${
-                            minutes < 10 ? '0' + minutes : minutes
+                            minutes < 10 ? "0" + minutes : minutes
                         }:${
-                            seconds < 10 ? '0' + seconds : seconds 
+                            seconds < 10 ? "0" + seconds : seconds 
                         }`;
                 }
             </script>

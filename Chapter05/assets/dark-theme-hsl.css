@@ -47,7 +47,13 @@ a:active {
 	color: hsl(225, 75%, 60%);
 }
 .content-area {
-    background: hsl(0, 0%, 0%);
+    background: hsl(205, 20%, 20%);
+}
+.widget-area h2 {
+    padding-left: 20px;
+}
+.widget-area ul {
+    padding-left: 30px;
 }
 header.site-header h1 {
     color: hsl(205, 50%, 80%);
@@ -74,10 +80,10 @@ article picture img {
     border-bottom: 4px solid hsl(244, 89%, 68%)
 }
 footer.site-footer {
-    color: hsl(205, 64%, 80%);
+    color: hsl(205, 60%, 80%);
     background: hsl(205, 100%, 20%);
 }
 footer.site-footer a {
-    color: hsl(205, 64%, 80%);
+    color: hsl(205, 60%, 80%);
 }
 

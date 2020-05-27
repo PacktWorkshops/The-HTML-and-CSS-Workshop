@@ -1,7 +1,7 @@
 {
-  "name": "chapter12",
+  "name": "chapter11",
   "version": "1.0.0",
-  "description": "HTML5 & CSS3 Workshop Chapter12 Exercises",
+  "description": "HTML5 & CSS3 Workshop Chapter11 Exercises",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
