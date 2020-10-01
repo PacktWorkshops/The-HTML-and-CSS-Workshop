@@ -15,7 +15,7 @@ To get started with the project files, you'll need to:
 Install Visual Studio Code on [Windows](https://code.visualstudio.com/download), [Mac](https://code.visualstudio.com/download), [Linux](https://code.visualstudio.com/download)
 
 ## About The HTML and CSS Workshop
-You already know you want to learn HTML and CSS, and a smarter way to learn HTML and CSS is to learn by doing. [The HTML and CSS Workshop](https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop) focuses on building up your practical skills so that you can build your own static web pages from scratch, or work with existing themes on modern platforms like WordPress and Shopify. It’s the perfect way to get started with web development. You'll learn from real examples that lead to real results.
+You already know that you want to learn HTML and CSS, and a smarter way to learn HTML and CSS is to learn by doing practicals on your own. [The HTML and CSS Workshop](https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop) this focuses on building up your practical skills so that you can build your own static web pages from scratch, or work with existing themes on modern platforms like WordPress and Shopify. It’s the perfect way to get started with web development. You'll learn from real examples that lead to real results.
 
 ## What You Will Learn
 * Get to grips with the key features of HTML5 and CSS3 
