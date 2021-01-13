@@ -9,7 +9,7 @@
 This is the repository for [The HTML and CSS Workshop](https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
-<a href="https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20HTML%20and%20CSS%20Workshop.jpg" alt="The HTML and CSS Workshop" height="340px" width="280px" align="right" this.target="_blank"></a>
+<a href="https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20HTML%20and%20CSS%20Workshop.png" alt="The HTML and CSS Workshop" height="340px" width="280px" align="right" this.target="_blank"></a>
 
 To get started with the project files, you'll need to:
 Install Visual Studio Code on [Windows](https://code.visualstudio.com/download), [Mac](https://code.visualstudio.com/download), [Linux](https://code.visualstudio.com/download)
