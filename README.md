@@ -6,26 +6,30 @@
 [![HTML 5](https://img.shields.io/badge/HTML-5-blue.svg)](https://dev.w3.org/html5/html-author/)
 [![CSS 3](https://img.shields.io/badge/CSS-3-blue.svg)](https://dev.w3.org/html5/html-author/)
 
-This is the repository for [The HTML and CSS Workshop](https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop). It contains all the supporting project files necessary to work through the course from start to finish.
+This is the repository for [The HTML and CSS Workshop](https://www.amazon.com/HTML-CSS-Workshop-Interactive-Approach-ebook/dp/B082926TQG/ref=sr_1_1?dchild=1&keywords=The%20HTML%20and%20CSS%20Workshop&qid=1611056782&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838824532&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop). It contains all the supporting project files necessary to work through the course from start to finish.
 
 ## Requirements and Setup
-<a href="https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20HTML%20and%20CSS%20Workshop.png" alt="The HTML and CSS Workshop" height="340px" width="280px" align="right" this.target="_blank"></a>
+<a href="https://www.amazon.com/HTML-CSS-Workshop-Interactive-Approach-ebook/dp/B082926TQG/ref=sr_1_1?dchild=1&keywords=The%20HTML%20and%20CSS%20Workshop&qid=1611056782&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838824532&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20HTML%20and%20CSS%20Workshop.png" alt="The HTML and CSS Workshop" height="340px" width="280px" align="right" this.target="_blank"></a>
 
-To get started with the project files, you'll need to:
-Install Visual Studio Code on [Windows](https://code.visualstudio.com/download), [Mac](https://code.visualstudio.com/download), [Linux](https://code.visualstudio.com/download)
+To get started with the project files, you'll need to install Visual Studio Code on
+* [Windows](https://code.visualstudio.com/download) 
+* [Mac](https://code.visualstudio.com/download)
+* [Linux](https://code.visualstudio.com/download)
 
 ## About The HTML and CSS Workshop
-You already know you want to learn HTML and CSS, and a smarter way to learn HTML and CSS is to learn by doing. [The HTML and CSS Workshop](https://courses.packtpub.com/courses/html-css?utm_source=github&utm_medium=repository&utm_campaign=978-1-83882-453-2&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop) focuses on building up your practical skills so that you can build your own static web pages from scratch, or work with existing themes on modern platforms like WordPress and Shopify. It’s the perfect way to get started with web development. You'll learn from real examples that lead to real results.
+[The HTML and CSS Workshop](https://www.amazon.com/HTML-CSS-Workshop-Interactive-Approach-ebook/dp/B082926TQG/ref=sr_1_1?dchild=1&keywords=The%20HTML%20and%20CSS%20Workshop&qid=1611056782&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838824532&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop) equips you with the practical knowledge to create modern responsive websites. From mastering simple HTML markup and CSS tags, through to integrating media queries and animations to create a rich, engaging user experience, you'll build your skills with the help of hands-on examples and activities.
 
 ## What You Will Learn
-* Get to grips with the key features of HTML5 and CSS3 
-* Learn how to integrate animation, media, and custom themes 
-* Understand how you can easily to customise and maintain CSS 
-* Develop your own mobile-first approach while designing websites 
-* Learn how to diagnose and resolve common style and structural problems 
+* Understand how websites are built, structured, and styled
+* Master the syntax and structure of HTML and CSS
+* Know how to build websites from scratch using HTML5 and CSS3
+* Create intuitive forms that allow users to input data
+* Style your website by integrating videos, animations, and themes
+* Design robust websites that work on all modern devices seamlessly
+* Discover how to maintain and improve the performance of a website 
 
 ## Related Workshops
 If you've found this repository useful, you might want to check out some of our other workshop titles:
-* [The PHP Workshop](https://courses.packtpub.com/courses/php?utm_source=github&utm_medium=repository&utm_campaign=9781838648916&utm_term=PHP&utm_content=The%20PHP%20Workshop)
-* [The Java Workshop](https://courses.packtpub.com/courses/java?utm_source=github&utm_medium=repository&utm_campaign=9781838986698&utm_term=Java&utm_content=The%20Java%20Workshop)
-* [The JavaScript Workshop](https://courses.packtpub.com/courses/javascript?utm_source=github&utm_medium=repository&utm_campaign=978-1-83864-191-7&utm_term=JavaScript&utm_content=The%20JavaScript%20Workshop)
+* [The JavaScript Workshop](https://www.amazon.com/JavaScript-Workshop-Interactive-Approach-Learning-ebook/dp/B0824584WF/ref=sr_1_1?dchild=1&keywords=The%20JavaScript%20Workshop&qid=1611056880&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838641917&utm_term=JavaScript&utm_content=The%20JavaScript%20Workshop)
+* [The PHP Workshop](https://www.amazon.com/PHP-Workshop-Interactive-Approach-Learning-ebook/dp/B07ZKDVTM4/ref=sr_1_1?dchild=1&keywords=The%20PHP%20Workshop&qid=1611064737&s=books&sr=1-1&utm_source=github&utm_medium=repository&utm_campaign=9781838648916&utm_term=PHP&utm_content=The%20PHP%20Workshop)
+* [The React Workshop](https://www.amazon.com/React-Workshop-Interactive-Approach-Learning-ebook/dp/B082VG6JCL/ref=sr_1_1?dchild=1&keywords=The%20React%20Workshop&qid=1611056710&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838645564&utm_term=React&utm_content=The%20React%20Workshop)
