@@ -4,7 +4,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/PacktWorkshops/The-HTML-and-CSS-Workshop.svg)](https://github.com/PacktWorkshops/The-HTML-and-CSS-Workshop/stargazers)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PacktWorkshops/The-HTML-and-CSS-Workshop/pulls)
 [![HTML 5](https://img.shields.io/badge/HTML-5-blue.svg)](https://dev.w3.org/html5/html-author/)
-[![CSS 3](https://img.shields.io/badge/CSS-3-blue.svg)](https://dev.w3.org/html5/html-author/)
 
 This is the repository for [The HTML and CSS Workshop](https://www.amazon.com/HTML-CSS-Workshop-Interactive-Approach-ebook/dp/B082926TQG/ref=sr_1_1?dchild=1&keywords=The%20HTML%20and%20CSS%20Workshop&qid=1611056782&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838824532&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop). It contains all the supporting project files necessary to work through the course from start to finish.
 
