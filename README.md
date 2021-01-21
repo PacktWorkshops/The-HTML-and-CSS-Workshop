@@ -10,10 +10,8 @@ This is the repository for [The HTML and CSS Workshop](https://www.amazon.com/HT
 ## Requirements and Setup
 <a href="https://www.amazon.com/HTML-CSS-Workshop-Interactive-Approach-ebook/dp/B082926TQG/ref=sr_1_1?dchild=1&keywords=The%20HTML%20and%20CSS%20Workshop&qid=1611056782&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838824532&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20HTML%20and%20CSS%20Workshop.png" alt="The HTML and CSS Workshop" height="340px" width="280px" align="right" this.target="_blank"></a>
 
-To get started with the project files, you'll need to install Visual Studio Code on
-* [Windows](https://code.visualstudio.com/download) 
-* [Mac](https://code.visualstudio.com/download)
-* [Linux](https://code.visualstudio.com/download)
+To get started with the project files, you'll need to:
+* Install [Visual Studio Code](https://code.visualstudio.com/download)
 
 ## About The HTML and CSS Workshop
 [The HTML and CSS Workshop](https://www.amazon.com/HTML-CSS-Workshop-Interactive-Approach-ebook/dp/B082926TQG/ref=sr_1_1?dchild=1&keywords=The%20HTML%20and%20CSS%20Workshop&qid=1611056782&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838824532&utm_term=HTML%20and%20CSS&utm_content=The%20HTML%20and%20CSS%20Workshop) equips you with the practical knowledge to create modern responsive websites. From mastering simple HTML markup and CSS tags, through to integrating media queries and animations to create a rich, engaging user experience, you'll build your skills with the help of hands-on examples and activities.
